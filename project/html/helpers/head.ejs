@@ -23,5 +23,32 @@
 <!-- then bootstrap -->
 <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+<script>var apiKey="<%= process.env.API_KEY %>";</script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="/__/firebase/7.14.2/firebase-auth.js"></script>
+     <script src="/__/firebase/7.14.2/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "<%= process.env.FIREBASE_API_KEY %>",
+    authDomain: "firstone-17b51.firebaseapp.com",
+    databaseURL: "https://firstone-17b51.firebaseio.com",
+    projectId: "firstone-17b51",
+    storageBucket: "firstone-17b51.appspot.com",
+    messagingSenderId: "1075585972130",
+    appId: "1:1075585972130:web:717f6f2e6090ec4c3ba4fb",
+    measurementId: "G-H42DKSSH8G"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
 <!-- then our app's own js file -->
 <script src="js/main.js"></script>
